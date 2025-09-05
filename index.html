@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Poll Formulier</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .error {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Poll</h1>
+    <form id="pollForm">
+      <fieldset>
+        <legend>1. Welke hobby's heb je? (Meerdere mogelijk)</legend>
+        <label
+          ><input type="checkbox" name="hobbies" value="lezen" /> Lezen</label
+        ><br />
+        <label
+          ><input type="checkbox" name="hobbies" value="sporten" />
+          Sporten</label
+        ><br />
+        <label
+          ><input type="checkbox" name="hobbies" value="gamen" /> Gamen</label
+        ><br />
+        <label
+          ><input type="checkbox" name="hobbies" value="muziek" /> Muziek
+          luisteren</label
+        >
+        <div id="hobbyError" class="error">Kies minstens één hobby.</div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Wat is je favoriete seizoen?</legend>
+        <label><input type="radio" name="seizoen" value="lente" /> Lente</label
+        ><br />
+        <label><input type="radio" name="seizoen" value="zomer" /> Zomer</label
+        ><br />
+        <label
+          ><input type="radio" name="seizoen" value="herfst" /> Herfst</label
+        ><br />
+        <label
+          ><input type="radio" name="seizoen" value="winter" /> Winter</label
+        >
+        <div id="seizoenError" class="error">Kies één seizoen.</div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Wat is je favoriete boek?</legend>
+        <input
+          type="text"
+          id="boekInput"
+          name="boek"
+          placeholder="Voer de titel in"
+        />
+        <div id="boekError" class="error">Voer een boek in.</div>
+      </fieldset>
+
+      <br />
+      <button type="submit">Verzenden</button>
+    </form>
+
+    <script>
+      // hier komt de code die bepaalde controles doen.
+      // 1. zijn er chechboxes aangeduid?
+      // 2. is er een keuze gemaakt van seizoen?
+      // 3. is er een boek ingevuld?
+      // pas als alles ok is mag de melding komen:
+      // "bedankt om alles in te vullen"
+    </script>
+  </body>
+</html>
